@@ -78,7 +78,9 @@ def extract_indeed_jobs(keyword):
 
                 # dict 데이터 형
                 job_data = {
-                    'position': title.replace(",", " "),
+
+                    # type(title) : string
+                    'position': title.replace("의 전체 세부 정보"," "),
                     'company': company.string.replace(",", " "),
                     'location': location.string.replace(",", " "),
                     'link': f"https://kr.indeed.com{link}"
