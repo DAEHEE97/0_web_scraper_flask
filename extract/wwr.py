@@ -13,6 +13,9 @@ def extract_jobs(keyword):
     if response.status_code != 200:
         print("Can't request website")
     else:
+
+        print(f'Request url : {base_url}{keyword}')
+
         soup = BeautifulSoup(response.text,"html.parser")
         
         # print(soup.find_all('title'))
